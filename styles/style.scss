@@ -1,0 +1,55 @@
+@import "./contentStyle.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0 1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    padding-bottom: 0;
+
+    .cart-image {
+        position: relative;
+
+        img {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
+        .count-in-cart {
+            position: absolute;
+            height: 1.8rem;
+            width: 1.8rem;
+            font-size: 1.3rem;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -1.5rem;
+            right: -0.5rem;
+        }
+    }
+}
+
+.go-back-home {
+    position: relative;
+    top: 2rem;
+    left: 3rem;
+    text-decoration: none;
+    background-color: gray;
+    color: black;
+    padding: 0.5rem 2rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+}
