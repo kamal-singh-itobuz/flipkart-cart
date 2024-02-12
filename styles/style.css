@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   gap: 3rem;
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 .content .card {
   background-color: rgb(171, 170, 170);
@@ -67,20 +68,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  padding: 0 1rem;
+  scroll-behavior: smooth;
 }
 
 .header {
   display: flex;
   align-items: center;
   padding: 2rem 3rem;
-  padding-bottom: 0;
+  padding-bottom: 1rem;
+  background-color: rgb(245, 235, 218);
+  position: sticky;
+  top: 0;
 }
 .header h2 {
   flex-grow: 1;
+}
+.header .login-signup-btn {
+  text-decoration: none;
+  background-color: rgb(182, 179, 179);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  color: black;
 }
 .header .cart-image {
   position: relative;

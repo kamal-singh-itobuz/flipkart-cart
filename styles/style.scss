@@ -4,19 +4,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    padding: 0 1rem;
+    scroll-behavior: smooth;
 }
 
 .header {
     display: flex;
     align-items: center;
     padding: 2rem 3rem;
-    padding-bottom: 0;
+    padding-bottom: 1rem;
+    background-color: rgb(245, 235, 218);
+    position: sticky;
+    top: 0;
     h2{
         flex-grow: 1;
+    }
+    .login-signup-btn {
+        text-decoration: none;
+        background-color: rgb(182, 179, 179);
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.3rem;
+        color: black;
     }
     .cart-image {
         position: relative;
