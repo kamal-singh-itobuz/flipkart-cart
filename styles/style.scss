@@ -12,14 +12,15 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem;
     padding-bottom: 0;
-
+    h2{
+        flex-grow: 1;
+    }
     .cart-image {
         position: relative;
-
+        margin-left: 1.5rem;
         img {
             height: 2.5rem;
             width: 2.5rem;
