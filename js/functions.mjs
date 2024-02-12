@@ -1,4 +1,4 @@
-export function addToLocalStorage(isCart, cardId, data, countObj, priceObj, totalAmount) {
+export function addToLocalStorage(isCart, cardId, data, countObj, countInCart, priceObj, totalAmount) {
     let productsInCart = JSON.parse(localStorage.getItem("products") || "[]");
     let quantityInCart = JSON.parse(localStorage.getItem("quantity") || "[]");
     const indexAtAdd = productsInCart.findIndex((element) => element.index === Number(cardId));
@@ -8,6 +8,7 @@ export function addToLocalStorage(isCart, cardId, data, countObj, priceObj, tota
         let obj = {};
         obj[cardId] = 1;
         quantityInCart.push(obj);
+        if(countInCart) countInCart.innerText = quantityInCart.length;
     } else {
         quantityInCart[indexAtAdd][cardId]++;
         countObj.innerText = quantityInCart[indexAtAdd][cardId];
@@ -21,7 +22,7 @@ export function addToLocalStorage(isCart, cardId, data, countObj, priceObj, tota
     localStorage.setItem("quantity", JSON.stringify(quantityInCart));
 }
 
-export function removeFromLocalStorage(isCart, cardId, data, countObj, addToCartBtn, addRemoveBtn, priceObj, cardObj, totalAmount) {
+export function removeFromLocalStorage(isCart, cardId, data, countObj, addToCartBtn, addRemoveBtn, countInCart, priceObj, cardObj, totalAmount) {
     let productsInCart = JSON.parse(localStorage.getItem("products") || "[]");
     let quantityInCart = JSON.parse(localStorage.getItem("quantity") || "[]");
     const indexAtRemove = productsInCart.findIndex((element) => element.index === Number(cardId));
@@ -30,11 +31,12 @@ export function removeFromLocalStorage(isCart, cardId, data, countObj, addToCart
     if (!quantityInCart[indexAtRemove][cardId]) {
         productsInCart.splice(indexAtRemove, 1);
         quantityInCart.splice(indexAtRemove, 1);
-        if (isCart === "cart") cardObj.style.display = "none"; //to remove from cart when quantity is 0
+        if (isCart === "cart") cardObj.style.display = "none"; 
         if (isCart === "home") {
             addToCartBtn.style.display = "block";
             addRemoveBtn.style.display = "none";
         }
+        if(countInCart) countInCart.innerText = quantityInCart.length;
     }
     if (indexAtRemove < quantityInCart.length) countObj.innerText = quantityInCart[indexAtRemove][cardId];
     if (isCart === "cart" && indexAtRemove < quantityInCart.length) {
