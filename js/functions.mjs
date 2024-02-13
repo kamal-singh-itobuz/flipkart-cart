@@ -51,19 +51,18 @@ export function removeFromLocalStorage(currentUserEmail, isCart, cardId, data, c
     if (!currentUserQuantity[indexAtRemove][cardId]) {
         currentUserProducts.splice(indexAtRemove, 1);
         currentUserQuantity.splice(indexAtRemove, 1);
-
+        if (currentUserQuantity.length === 0) { //when no item in cart
+            totalAmount.innerText = 0;
+        }
         if (isCart === "cart") cardObj.style.display = "none";
-
         if (isCart === "home") {
             addToCartBtn.style.display = "block";
             addRemoveBtn.style.display = "none";
         }
-
         if (countInCart) countInCart.innerText = currentUserQuantity.length;
     }
 
     if (indexAtRemove < currentUserQuantity.length) countObj.innerText = currentUserQuantity[indexAtRemove][cardId];
-
     if (isCart === "cart" && indexAtRemove < currentUserQuantity.length) {
         let amount = data[productIndexToRemove].price * currentUserQuantity[indexAtRemove][cardId];
         priceObj.innerText = "Rs. " + amount;
