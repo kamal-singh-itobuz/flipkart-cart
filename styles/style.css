@@ -82,6 +82,7 @@
 }
 .header h2 {
   flex-grow: 1;
+  cursor: pointer;
 }
 .header .login-signup-btn {
   text-decoration: none;
@@ -92,6 +93,7 @@
 }
 .header h3 {
   display: none;
+  cursor: pointer;
 }
 .header .logout-btn {
   display: none;
@@ -103,6 +105,7 @@
   position: relative;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  cursor: pointer;
 }
 .header .cart-image img {
   height: 2.5rem;

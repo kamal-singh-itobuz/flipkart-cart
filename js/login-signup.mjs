@@ -13,15 +13,28 @@ const enterOTP = document.querySelector("#enter-otp");
 const otpVerifyBtn = document.querySelector("#otp-verify");
 const registerBtn = document.querySelector("#register-btn");
 let generatedOtp = "";
+
+function emailValidate(email) {
+  let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  return validRegex.test(email);
+}
+
 registerHere.addEventListener("click", () => {
   loginContainer.style.display = "none";
   signupContainer.style.display = "flex";
 });
+
 loginHere.addEventListener('click', () => {
   loginContainer.style.display = "flex";
   signupContainer.style.display = "none";
-})
+});
+
 generateOTPBtn.addEventListener("click", () => {
+  if(!emailValidate(emailId.value)){
+    alert("Email Id is not valid.!!!");
+    emailId.value = '';
+    return;
+  }
   const digits = "0123456789";
   generatedOtp = "";
   for (let i = 0; i < 4; i++)
@@ -33,7 +46,7 @@ generateOTPBtn.addEventListener("click", () => {
   };
   emailjs
     .send("service_3bfc5u8", "template_x481qkf", params)
-    .then(alert("OTP Sent!"));
+    .then(alert("OTP Sent to your email Id!"));
 });
 
 otpVerifyBtn.addEventListener("click", () => {
@@ -44,17 +57,26 @@ otpVerifyBtn.addEventListener("click", () => {
     registerBtn.disabled = false;
   } else {
     alert("Invalid OTP, Enter correct OTP");
+    otpVerifyBtn.innerText = "Not Verified";
+    otpVerifyBtn.style.backgroundColor = "#c1121f";
     registerBtn.disabled = true;
   }
 });
 
 registerBtn.addEventListener("click", () => {
+  let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
+  let index = registeredUsers.findIndex(ele => ele.email === emailId.value);
+  if (index >= 0) {
+    alert("Email already exists, Login Yourself!!!");
+    loginContainer.style.display = "flex";
+    signupContainer.style.display = "none";
+    return;
+  }
   let obj = {
     name: fullName.value,
     email: emailId.value,
     password: passWord.value,
   };
-  let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
   registeredUsers.push(obj);
   localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
   alert("Registration Successful!");
@@ -77,7 +99,6 @@ loginBtn.addEventListener("click", () => {
     ]));
     location.href = "../index.html";
   } else alert("Email or Password is wrong...");
-  loginEmail.value = '';
   loginPassword.value = '';
 });
 

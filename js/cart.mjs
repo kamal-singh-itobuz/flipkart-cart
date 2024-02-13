@@ -10,10 +10,12 @@ const totalAmount = document.querySelector('.total-amount');
 const addRemoveBtns = document.querySelectorAll(".add-remove-btns");
 const addToCartBtn = document.querySelectorAll('.add-cart-btn');
 let currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
+
 if (!currentUser.length) {
     alert("User does not exists.!");
     location.href = "./pages/login.html";
 }
+
 let productsInCart = JSON.parse(localStorage.getItem("products") || "{}");
 let quantityInCart = JSON.parse(localStorage.getItem("quantity") || "{}");
 let currentUserEmail = currentUser[0].userEmail;
