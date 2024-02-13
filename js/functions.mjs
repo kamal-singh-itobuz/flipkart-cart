@@ -3,7 +3,7 @@ export function addToLocalStorage(currentUserEmail, isCart, cardId, data, countO
     let quantityInCart = JSON.parse(localStorage.getItem("quantity") || "{}");
     let currentUserProducts = [];
     let currentUserQuantity = [];
-    if(currentUserEmail in productsInCart){
+    if (currentUserEmail in productsInCart) {
         currentUserProducts = productsInCart[currentUserEmail];
         currentUserQuantity = quantityInCart[currentUserEmail];
     }
@@ -14,7 +14,7 @@ export function addToLocalStorage(currentUserEmail, isCart, cardId, data, countO
         let obj = {};
         obj[cardId] = 1;
         currentUserQuantity.push(obj);
-        if(countInCart) countInCart.innerText = currentUserQuantity.length;
+        if (countInCart) countInCart.innerText = currentUserQuantity.length;
     } else {
         currentUserQuantity[indexAtAdd][cardId]++;
         countObj.innerText = currentUserQuantity[indexAtAdd][cardId];
@@ -35,7 +35,7 @@ export function removeFromLocalStorage(currentUserEmail, isCart, cardId, data, c
     let quantityInCart = JSON.parse(localStorage.getItem("quantity") || "{}");
     let currentUserProducts = [];
     let currentUserQuantity = [];
-    if(currentUserEmail in productsInCart){
+    if (currentUserEmail in productsInCart) {
         currentUserProducts = productsInCart[currentUserEmail];
         currentUserQuantity = quantityInCart[currentUserEmail];
     }
@@ -45,12 +45,12 @@ export function removeFromLocalStorage(currentUserEmail, isCart, cardId, data, c
     if (!currentUserQuantity[indexAtRemove][cardId]) {
         currentUserProducts.splice(indexAtRemove, 1);
         currentUserQuantity.splice(indexAtRemove, 1);
-        if (isCart === "cart") cardObj.style.display = "none"; 
+        if (isCart === "cart") cardObj.style.display = "none";
         if (isCart === "home") {
             addToCartBtn.style.display = "block";
             addRemoveBtn.style.display = "none";
         }
-        if(countInCart) countInCart.innerText = currentUserQuantity.length;
+        if (countInCart) countInCart.innerText = currentUserQuantity.length;
     }
     if (indexAtRemove < currentUserQuantity.length) countObj.innerText = currentUserQuantity[indexAtRemove][cardId];
     if (isCart === "cart" && indexAtRemove < currentUserQuantity.length) {

@@ -15,9 +15,11 @@
     background-color: rgb(245, 235, 218);
     position: sticky;
     top: 0;
-    h2{
+
+    h2 {
         flex-grow: 1;
     }
+
     .login-signup-btn {
         text-decoration: none;
         background-color: rgb(182, 179, 179);
@@ -25,9 +27,23 @@
         border-radius: 0.3rem;
         color: black;
     }
+
+    h3 {
+        display: none;
+    }
+
+    .logout-btn {
+        display: none;
+        text-decoration: none;
+        color: black;
+        font-size: 1.3rem;
+    }
+
     .cart-image {
         position: relative;
         margin-left: 1.5rem;
+        margin-right: 1.5rem;
+
         img {
             height: 2.5rem;
             width: 2.5rem;

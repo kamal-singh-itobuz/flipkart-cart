@@ -18,8 +18,8 @@ registerHere.addEventListener("click", () => {
   signupContainer.style.display = "flex";
 });
 loginHere.addEventListener('click', () => {
-    loginContainer.style.display = "flex";
-    signupContainer.style.display = "none";
+  loginContainer.style.display = "flex";
+  signupContainer.style.display = "none";
 })
 generateOTPBtn.addEventListener("click", () => {
   const digits = "0123456789";
@@ -69,11 +69,12 @@ loginBtn.addEventListener("click", () => {
   const index = registeredUsers.findIndex(element => element.email === emailId && element.password === pass);
 
   if (index >= 0) {
-    // let currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
-    // currentUser[0] = {userEmail: emailId,
-    // userName: registeredUsers[index].name};
-    localStorage.setItem("currentUser", JSON.stringify([{userEmail: emailId,
-      userName: registeredUsers[index].name}]));
+    localStorage.setItem("currentUser", JSON.stringify([
+      {
+        userEmail: emailId,
+        userName: registeredUsers[index].name
+      }
+    ]));
     location.href = "../index.html";
   } else alert("Email or Password is wrong...");
   loginEmail.value = '';

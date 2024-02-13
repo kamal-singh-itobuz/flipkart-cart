@@ -6,6 +6,9 @@ const content = document.querySelector("#content");
 const countInCart = document.querySelector(".count-in-cart");
 const counterObj = document.getElementsByClassName("counter");
 const addToCartBtn = document.getElementsByClassName("add-cart-btn");
+const loginSignUpBtn = document.querySelector('.login-signup-btn');
+const userNameText = document.querySelector('.user-name');
+const logoutBtn = document.querySelector('.logout-btn');
 let currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
 let currentUserEmail = currentUser.length == 1 ? currentUser[0].userEmail : "";
 let quantityInCart = JSON.parse(localStorage.getItem("quantity") || "{}");
@@ -13,12 +16,24 @@ let currentUserQuantity = currentUserEmail !== "" ? quantityInCart[currentUserEm
 addHTML(currentUserEmail, tShirtData, content, "home");
 
 countInCart.innerText = currentUserQuantity?.length || 0;
+if (currentUser.length) {
+  loginSignUpBtn.style.display = "none";
+  userNameText.style.display = "block";
+  userNameText.innerText = `Hey ${currentUser[0].userName}!`;
+  logoutBtn.style.display = "block";
+}
+
+logoutBtn.addEventListener('click', () => {
+  location.href = "./pages/logIn.html";
+  currentUser.pop();
+  localStorage.setItem("currentUser", "[]");
+})
 content.addEventListener("click", (e) => {
   if (e.target.className === "add-cart-btn") {
     let currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
-    if(!currentUser.length) {
+    if (!currentUser.length) {
       alert("User does not exists.!");
-      location.href="./pages/login.html";
+      location.href = "./pages/logIn.html";
       return;
     }
     currentUserEmail = currentUser[0].userEmail;

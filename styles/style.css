@@ -90,9 +90,19 @@
   border-radius: 0.3rem;
   color: black;
 }
+.header h3 {
+  display: none;
+}
+.header .logout-btn {
+  display: none;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+}
 .header .cart-image {
   position: relative;
   margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 .header .cart-image img {
   height: 2.5rem;
