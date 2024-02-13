@@ -50,29 +50,30 @@ otpVerifyBtn.addEventListener("click", () => {
 
 registerBtn.addEventListener("click", () => {
   let obj = {
+    name: fullName.value,
     email: emailId.value,
     password: passWord.value,
   };
-  let emailPassword = JSON.parse(
-    localStorage.getItem("authentication") || "[]"
-  );
-  emailPassword.push(obj);
-  localStorage.setItem("authentication", JSON.stringify(emailPassword));
+  let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
+  registeredUsers.push(obj);
+  localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
   alert("Registration Successful!");
+  signupContainer.style.display = "none";
   loginContainer.style.display = "flex";
 });
 
 loginBtn.addEventListener("click", () => {
   let emailId = loginEmail.value;
   let pass = loginPassword.value;
-  let emailPassword = JSON.parse(
-    localStorage.getItem("authentication") || "[]"
-  );
-  const index = emailPassword.findIndex(
-    (element) => element.email === emailId && element.password === pass
-  );
+  let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
+  const index = registeredUsers.findIndex(element => element.email === emailId && element.password === pass);
 
   if (index >= 0) {
+    // let currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
+    // currentUser[0] = {userEmail: emailId,
+    // userName: registeredUsers[index].name};
+    localStorage.setItem("currentUser", JSON.stringify([{userEmail: emailId,
+      userName: registeredUsers[index].name}]));
     location.href = "../index.html";
   } else alert("Email or Password is wrong...");
   loginEmail.value = '';

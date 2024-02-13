@@ -1,7 +1,9 @@
-export function addHTML(data, content, isCart) {
+export function addHTML(currentUserEmail, data, content, isCart) {
     data.forEach((tShirt) => {
-        let qtyArr = JSON.parse(localStorage.getItem("quantity") || "[]");
-        let indexInQtyArr = qtyArr.findIndex(
+        let quantityInCart = JSON.parse(localStorage.getItem("quantity") || "{}");
+        let currentUserQuantity = [];
+        if(currentUserEmail in quantityInCart) currentUserQuantity = quantityInCart[currentUserEmail];
+        let indexInQtyArr = currentUserQuantity.findIndex(
             (ele) => Number(Object.keys(ele)[0]) === tShirt.index
         );
 
@@ -18,7 +20,7 @@ export function addHTML(data, content, isCart) {
         let tshirtTitle = document.createElement("p");
         tshirtTitle.innerText = tShirt.name;
         let tshirtPrice = document.createElement("p");
-        isCart === 'cart' ? tshirtPrice.innerText = "Rs. " + tShirt.price * Object.values(qtyArr[indexInQtyArr])[0] : tshirtPrice.innerText = "Rs. " + tShirt.price;
+        isCart === 'cart' ? tshirtPrice.innerText = "Rs. " + tShirt.price * Object.values(currentUserQuantity[indexInQtyArr])[0] : tshirtPrice.innerText = "Rs. " + tShirt.price;
         tshirtPrice.setAttribute("class", "price");
         let addToCartBtn = document.createElement("button");
         addToCartBtn.innerText = "Add to Cart";
@@ -34,7 +36,7 @@ export function addHTML(data, content, isCart) {
         let counter = document.createElement("span");
         counter.setAttribute("class", "counter");
         if (indexInQtyArr >= 0) {
-            counter.innerText = Object.values(qtyArr[indexInQtyArr])[0];
+            counter.innerText = Object.values(currentUserQuantity[indexInQtyArr])[0];
             addToCartBtn.style.display = "none";
             addRemoveDiv.style.display = "block";
         } else {
