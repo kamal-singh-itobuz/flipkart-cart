@@ -95,5 +95,88 @@ export const tShirtData = [
       "https://i.pinimg.com/236x/af/96/95/af9695e0116a1d859336024e6cdcea10.jpg",
     name: "Black Skull",
   },
+  {
+    index: 14,
+    price: 1500,
+    picture:
+      "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    name: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+  },
+  {
+    index: 15,
+    price: 1500,
+    picture:
+      "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    name: "Mens Casual Premium Slim Fit T-Shirts ",
+  },
+  {
+    index: 16,
+    price: 1000,
+    picture:
+      "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    name: "Mens Cotton Jacket",
+  },
+  {
+    index: 17,
+    price: 1200,
+    picture:
+      "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    name: "Mens Casual Slim Fit",
+  },
+  {
+    index: 18,
+    price: 9500,
+    picture:
+      "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    name: "Bjohn Hardy Women's Legends Naga Gold",
+  },
+  {
+    index: 19,
+    price: 10500,
+    picture:
+      "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    name: "Solid Gold Petite Micropave ",
+  },
+  {
+    index: 20,
+    price: 11500,
+    picture:
+      "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    name: "White Gold Plated Princess",
+  },
+  {
+    index: 21,
+    price: 15000,
+    picture:
+      "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    name: "Pierced Owl Rose Gold Plated Stainless Steel",
+  },
+  {
+    index: 22,
+    price: 2500,
+    picture:
+      "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+    name: "WD 2TB Elements Portable External Hard Drive - USB 3.0",
+  },
+  {
+    index: 23,
+    price: 2000,
+    picture:
+      "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+    name: "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+  },
+  {
+    index: 24,
+    price: 5300,
+    picture:
+      "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    name: "Silicon Power 256GB SSD 3D NAND A55 SLC",
+  },
+  {
+    index: 25,
+    price: 1500,
+    picture:
+      "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+    name: "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+  },
 ];
-
