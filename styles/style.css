@@ -172,6 +172,21 @@
   font-weight: 600;
 }
 
+.carousel {
+  width: 100%;
+  display: flex;
+}
+.carousel .carousel-item {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+.carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
 @media (min-width: 522px) {
   .header h2 {
     flex-grow: 0;
@@ -193,5 +208,8 @@
   .header .cart-image {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+  }
+  .carousel {
+    height: 400px;
   }
 }/*# sourceMappingURL=style.css.map */
