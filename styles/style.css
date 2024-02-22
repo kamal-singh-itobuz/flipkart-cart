@@ -11,6 +11,7 @@
   gap: 3rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  padding: 0 1rem;
 }
 .content .card {
   background-color: rgb(171, 170, 170);
@@ -77,6 +78,11 @@
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .content {
+    padding: 0 4rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -173,6 +179,7 @@
 }
 
 .carousel {
+  padding: 0 0.5rem;
   width: 100%;
   display: flex;
   position: relative;
@@ -192,33 +199,18 @@
 .carousel .carousel-dots {
   display: flex;
   position: absolute;
-  right: 45%;
+  left: 50%;
   bottom: 0;
+  transform: translateX(-50%);
 }
 .carousel .carousel-dots > span {
   display: inline-block;
-  height: 0.8rem;
-  width: 0.8rem;
+  height: 0.6rem;
+  width: 0.6rem;
   border-radius: 50%;
   margin: 0.3rem;
   background-color: #9f86c0;
   cursor: pointer;
-}
-
-.category {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  margin: 0 1rem;
-  background-color: #a9d6e5;
-}
-.category > div {
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-.category > div:focus-within {
-  color: red;
 }
 
 @media (min-width: 522px) {
@@ -230,6 +222,9 @@
   }
   .header .search-bar .search {
     width: 80%;
+  }
+  .carousel {
+    padding: 0 1rem;
   }
 }
 @media (min-width: 768px) {
@@ -244,6 +239,6 @@
     margin-right: 1.5rem;
   }
   .carousel {
-    height: 400px;
+    height: 350px;
   }
 }/*# sourceMappingURL=style.css.map */

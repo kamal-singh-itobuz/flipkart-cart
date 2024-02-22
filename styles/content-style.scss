@@ -10,6 +10,7 @@
     gap: 3rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
+    padding: 0 1rem;
 
     .card {
         background-color: rgb(171, 170, 170);
@@ -84,5 +85,10 @@
 
     .total-amount {
         font-weight: 700;
+    }
+}
+@media (min-width: 768px) {
+    .content {
+        padding: 0 4rem;
     }
 }

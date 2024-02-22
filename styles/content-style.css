@@ -11,6 +11,7 @@
   gap: 3rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  padding: 0 1rem;
 }
 .content .card {
   background-color: rgb(171, 170, 170);
@@ -75,4 +76,10 @@
 }
 .total-amount-container .total-amount {
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 0 4rem;
+  }
 }/*# sourceMappingURL=content-style.css.map */
