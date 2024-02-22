@@ -1,4 +1,4 @@
-import { addHTML } from "./htmlCreation.mjs";
+import { addHTML } from "./html-creation.mjs";
 import { addToLocalStorage, removeFromLocalStorage } from "./functions.mjs";
 import { tShirtData } from "../data/data.mjs";
 
