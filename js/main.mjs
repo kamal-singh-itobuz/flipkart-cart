@@ -2,7 +2,7 @@ import { tShirtData } from "../data/data.mjs";
 import { addHTML } from "./html-creation.mjs";
 import { addToLocalStorage, removeFromLocalStorage } from "./functions.mjs";
 
-const content = document.querySelector("#content");
+const content = document.querySelector(".content");
 const countInCart = document.querySelector(".count-in-cart");
 const cartIcon = document.querySelector(".cart-image");
 const counterObj = document.getElementsByClassName("counter");
@@ -11,6 +11,7 @@ const loginSignUpBtn = document.querySelector('.login-signup-btn');
 const userNameText = document.querySelector('.user-name');
 const logoutBtn = document.querySelector('.logout-btn');
 const searchBar = document.querySelector('.search');
+const categorySection = document.querySelector('.category');
 let currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
 let currentUserEmail = currentUser.length === 1 ? currentUser[0].userEmail : "";
 let quantityInCart = JSON.parse(localStorage.getItem("quantity") || "{}");

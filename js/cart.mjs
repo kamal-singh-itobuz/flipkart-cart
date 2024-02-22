@@ -2,7 +2,7 @@ import { addHTML } from "./html-creation.mjs";
 import { addToLocalStorage, removeFromLocalStorage } from "./functions.mjs";
 import { tShirtData } from "../data/data.mjs";
 
-const content = document.querySelector("#content");
+const content = document.querySelector(".content");
 const counterObj = document.getElementsByClassName('counter');
 const priceObj = document.getElementsByClassName('price');
 const cardObj = document.getElementsByClassName('card');

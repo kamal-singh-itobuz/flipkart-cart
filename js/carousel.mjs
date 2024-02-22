@@ -11,7 +11,7 @@ function dotsAdded(carouselDotsSection, size) {
 }
 
 function highlightDot(index, dots) {
-    dots.forEach(dot => dot.style.backgroundColor = "red");
+    dots.forEach(dot => dot.style.backgroundColor = "#9f86c0");
     dots[index].style.backgroundColor = "black";
 }
 
