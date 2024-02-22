@@ -11,14 +11,11 @@ const loginSignUpBtn = document.querySelector('.login-signup-btn');
 const userNameText = document.querySelector('.user-name');
 const logoutBtn = document.querySelector('.logout-btn');
 const searchBar = document.querySelector('.search');
-const categorySection = document.querySelector('.category');
 let currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
 let currentUserEmail = currentUser.length === 1 ? currentUser[0].userEmail : "";
 let quantityInCart = JSON.parse(localStorage.getItem("quantity") || "{}");
 let currentUserQuantity = currentUserEmail !== "" ? quantityInCart[currentUserEmail] : [];
-const categoryClasses = ['men', 'women', 'jewellery', 'electonics'];
 let searchedProductsArray = [];
-let categoryProductArray = [];
 
 addHTML(currentUserEmail, tShirtData, content, "home");
 
@@ -47,7 +44,7 @@ logoutBtn.addEventListener('click', () => {
 });
 
 searchBar.addEventListener('input', () => {
-    const val = searchBar.value;
+    const val = searchBar.value.toLowerCase();
     content.innerHTML = "";
     searchedProductsArray = []
     tShirtData.filter(item => {
