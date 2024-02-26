@@ -13,18 +13,19 @@ if (!currentUser.length) {
 const quantityInCart = JSON.parse(localStorage.getItem("quantity") || "{}");
 const currentUserEmail = currentUser[0].userEmail;
 const currentUserQuantity = quantityInCart[currentUserEmail];
-let productsInCart = [];
-currentUserQuantity.forEach(ele => {
+const productsInCart = [];
+
+currentUserQuantity?.forEach(ele => {
     tShirtData.forEach(product => {
-        if(Number(ele.id) === product.index){
+        if (Number(ele.id) === product.index) {
             productsInCart.push(product);
         }
     });
 });
 
-addHTML(currentUserEmail, productsInCart, cartContent, ["cart"]);
+addHTML(currentUserEmail, productsInCart, cartContent, ["cart", totalAmount]);
 
 let totalAmountToPay = 0;
-for (let i = 0; i < currentUserQuantity.length; i++) 
+for (let i = 0; i < currentUserQuantity?.length; i++)
     totalAmountToPay += (currentUserQuantity[i].quantity * productsInCart[i].price);
 totalAmount.innerText = totalAmountToPay;

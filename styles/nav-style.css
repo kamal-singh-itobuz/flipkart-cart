@@ -112,7 +112,8 @@
     text-align: center;
     font-size: 1.2rem;
   }
-  .header .login-button, .header .logout-button {
+  .header .login-button,
+  .header .logout-button {
     font-size: 1.2rem;
   }
   .header .cart-image {

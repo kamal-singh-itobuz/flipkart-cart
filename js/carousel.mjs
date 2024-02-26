@@ -11,15 +11,13 @@ const carouselImages = [
 ]
 const size = carouselImages.length;
 let index = -1;
-for(let i=0; i<size; i++){
+for (let i = 0; i < size; i++) {
     const img = document.createElement('img');
     const dot = document.createElement('div');
     img.setAttribute('src', carouselImages[i]);
     img.setAttribute('alt', 'carousel-images');
     carousel.append(img);
-
     dot.setAttribute('class', 'dot');
-    dot.setAttribute('attr', (''+i));
     carouselDots.append(dot);
 }
 

@@ -15,7 +15,7 @@ const registerBtn = document.querySelector("#register-btn");
 let generatedOtp = "";
 
 function emailValidate(email) {
-    let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return validRegex.test(email);
 }
 
@@ -39,7 +39,7 @@ generateOTPBtn.addEventListener("click", () => {
     generatedOtp = "";
     for (let i = 0; i < 4; i++)
         generatedOtp += digits[Math.floor(Math.random() * 10)];
-    let params = {
+    const params = {
         email: emailId.value,
         name: fullName.value,
         otp: generatedOtp,
@@ -65,14 +65,14 @@ otpVerifyBtn.addEventListener("click", () => {
 
 registerBtn.addEventListener("click", () => {
     let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
-    let index = registeredUsers.findIndex(ele => ele.email === emailId.value);
+    const index = registeredUsers.findIndex(ele => ele.email === emailId.value);
     if (index >= 0) {
         alert("Email already exists, Login Yourself!!!");
         loginContainer.style.display = "flex";
         signupContainer.style.display = "none";
         return;
     }
-    let obj = {
+    const obj = {
         name: fullName.value,
         email: emailId.value,
         password: passWord.value,
@@ -85,8 +85,8 @@ registerBtn.addEventListener("click", () => {
 });
 
 loginBtn.addEventListener("click", () => {
-    let emailId = loginEmail.value;
-    let pass = loginPassword.value;
+    const emailId = loginEmail.value;
+    const pass = loginPassword.value;
     let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
     const index = registeredUsers.findIndex(element => element.email === emailId && element.password === pass);
 
