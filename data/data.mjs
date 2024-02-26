@@ -4,14 +4,14 @@ export const tShirtData = [
     price: 100,
     picture:
       "https://i.pinimg.com/originals/9f/3d/13/9f3d13912d3cf78e4c87975bcebc1fee.jpg",
-    name: "Just Chill",
+    name: "T-Shirt",
     category: "tshirt men"
   },
   {
     index: 1,
     picture:
       "https://render.fineartamerica.com/images/rendered/default/t-shirt/23/30/images/artworkimages/medium/1/coffee-coding-syntax-aadil-farooq-transparent.png?targetx=0&targety=0&imagewidth=430&imageheight=516&modelwidth=430&modelheight=575",
-    name: "Keep Coding",
+    name: "T-Shirt",
     price: 200,
     category: "tshirt men"
   },
@@ -19,7 +19,7 @@ export const tShirtData = [
     index: 2,
     picture:
       "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-    name: "Black",
+    name: "T-Shirt Black",
     price: 150,
     category: "tshirt men"
   },
@@ -27,7 +27,7 @@ export const tShirtData = [
     index: 3,
     picture:
       "https://5.imimg.com/data5/SH/GC/MY-8764775/mens-t-shirt-500x500.jpg",
-    name: "Mix Yellow",
+    name: "T-Shirt Yellow",
     price: 140,
     category: "tshirt men"
   },
@@ -36,13 +36,13 @@ export const tShirtData = [
     price: 500,
     picture:
       "https://www.billbazar.com.bd/public/uploads/all/8hgD0lQGODVXbB5sokhvwr7mUNjBx7pEHusuyGZj.webp",
-    name: "Bachelor",
+    name: "T-Shirt Bachelor",
     category: "tshirt men"
   },
   {
     index: 5,
     picture: "https://m.media-amazon.com/images/I/61GMJ+3ekAS._AC_UL320_.jpg",
-    name: "Right Price",
+    name: "T-Shirt",
     price: 250,
     category: "tshirt men"
   },
@@ -51,7 +51,7 @@ export const tShirtData = [
     price: 400,
     picture:
       "https://i.pinimg.com/236x/af/96/95/af9695e0116a1d859336024e6cdcea10.jpg",
-    name: "Black Skull",
+    name: "T-Shirt Black",
     category: "tshirt men"
   },
   {
@@ -59,14 +59,14 @@ export const tShirtData = [
     price: 300,
     picture:
       "https://i.pinimg.com/originals/9f/3d/13/9f3d13912d3cf78e4c87975bcebc1fee.jpg",
-    name: "Just Chill",
+    name: "t-Shirt Grey",
     category: "tshirt men"
   },
   {
     index: 8,
     picture:
       "https://render.fineartamerica.com/images/rendered/default/t-shirt/23/30/images/artworkimages/medium/1/coffee-coding-syntax-aadil-farooq-transparent.png?targetx=0&targety=0&imagewidth=430&imageheight=516&modelwidth=430&modelheight=575",
-    name: "Keep Coding",
+    name: "T-Shirt White",
     price: 500,
     category: "tshirt men"
   },
@@ -74,7 +74,7 @@ export const tShirtData = [
     index: 9,
     picture:
       "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-    name: "Black",
+    name: "Black T-Shirt",
     price: 1000,
     category: "tshirt men"
   },
@@ -82,7 +82,7 @@ export const tShirtData = [
     index: 10,
     picture:
       "https://5.imimg.com/data5/SH/GC/MY-8764775/mens-t-shirt-500x500.jpg",
-    name: "Mix Yellow",
+    name: "T-Shirt Yellow",
     price: 1400,
     category: "tshirt men"
   },
@@ -91,13 +91,13 @@ export const tShirtData = [
     price: 400,
     picture:
       "https://www.billbazar.com.bd/public/uploads/all/8hgD0lQGODVXbB5sokhvwr7mUNjBx7pEHusuyGZj.webp",
-    name: "Bachelor",
+    name: "T-Shirt Black",
     category: "tshirt men"
   },
   {
     index: 12,
     picture: "https://m.media-amazon.com/images/I/61GMJ+3ekAS._AC_UL320_.jpg",
-    name: "Right Price",
+    name: "T-Shirt",
     price: 600,
     category: "tshirt men"
   },
@@ -106,7 +106,7 @@ export const tShirtData = [
     price: 500,
     picture:
       "https://i.pinimg.com/236x/af/96/95/af9695e0116a1d859336024e6cdcea10.jpg",
-    name: "Black Skull",
+    name: "Black T-Shirt",
     category: "tshirt men"
   },
   {
