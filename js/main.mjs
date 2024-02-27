@@ -54,7 +54,7 @@ else {
 }
 
 logoutBtn.addEventListener('click', () => {
-    location.href = "./pages/login.html";
+    location.href = "./pages/login-signup.html";
     currentUser.pop();
     localStorage.setItem("currentUser", "[]");
 });

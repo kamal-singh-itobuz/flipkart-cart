@@ -7,7 +7,7 @@ const currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
 
 if (!currentUser.length) {
     alert("User does not exists.!");
-    location.href = "./pages/login.html";
+    location.href = "./pages/login-signup.html";
 }
 
 const quantityInCart = JSON.parse(localStorage.getItem("quantity") || "{}");

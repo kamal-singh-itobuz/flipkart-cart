@@ -1,15 +1,13 @@
 import { addToLocalStorage, removeFromLocalStorage } from "./functions.mjs";
 const currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
 let currentUserEmail = currentUser.length === 1 ? currentUser[0].userEmail : "";
-// for cart : isCart = ['cart', totalAmount, original tShirt Price]
-// for home : isCart = ['home', countInCart]
 function addToCartFunction(e, isCart) {
     if (isCart[0] === "home") {
         isCart[1].innerText = Number(isCart[1].innerText) + 1;
     }
     if (!currentUser.length) {
         alert("User does not exists.!");
-        location.href = "./pages/login.html";
+        location.href = "./pages/login-signup.html";
         return;
     }
     currentUserEmail = currentUser[0].userEmail;
